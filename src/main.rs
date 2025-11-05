@@ -1,18 +1,16 @@
+use std::fs;
+use std::io::prelude::*;
+
 fn main() {
+    //ingest data
+    let filename = "assets/everybody_codes_e2025_q01_p1.txt";
+    let raw_data = file
 
-//ingest data
+    //structure data
 
-//structure data
+    //follow rules
 
-//follow instructions
-
-//print result
+    //print result
 }
 
-fn ingest(file: str) => Result<str, E> {
-
-}
-
-fn structure() {
-
-}
+fn structure() {}
