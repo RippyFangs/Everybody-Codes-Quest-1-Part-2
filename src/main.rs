@@ -3,7 +3,7 @@ use std::fs::read_to_string;
 fn main() {
     //ingest data in a raw form
 
-    let filename = "assets/everybody_codes_e2025_q01_p1.txt";
+    let filename = "assets/everybody_codes_e2025_q01_p2.txt";
 
     let raw_data = match read_to_string(filename) {
         Ok(data) => data,
@@ -24,7 +24,7 @@ fn main() {
     let mut chosen_name: u32 = 0;
 
     //0 is our minumum, which we'll embody by working in unsigned integers. We can't go equal to or over the maximum number (as equal to is actuall over by 1 due to starting at 0)
-    let max_names: u32 = names.len() as u32;
+    let max_names: u32 = names.len() as u32 - 1;
 
     //loop through the commands
     for steps in commands {
@@ -40,7 +40,7 @@ fn main() {
         match steps.chars().next().expect("Unable to get instruction") {
             'R' => {
                 if chosen_name + num_steps >= max_names {
-                    chosen_name = max_names - 1
+                    chosen_name = max_names
                 } else {
                     chosen_name += num_steps
                 }
